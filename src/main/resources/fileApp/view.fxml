@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="257.0" prefWidth="584.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fileApp.SceneController">
+   <children>
+      <Button fx:id="mainButton" layoutX="227.0" layoutY="170.0" mnemonicParsing="false" onAction="#onButtonClick" prefHeight="24.0" prefWidth="130.0" text="Run" />
+      <TextField fx:id="nameInputFile" layoutX="52.0" layoutY="116.0" prefHeight="24.0" prefWidth="175.0" promptText="C:\input.txt" style="-fx-border-color: #A9A9A9;" />
+      <TextField fx:id="nameOutputFile" layoutX="357.0" layoutY="117.0" prefHeight="24.0" prefWidth="175.0" promptText="C:\output.txt" style="-fx-border-color: #A9A9A9;" />
+      <Label fx:id="invalidDetails" alignment="CENTER" layoutX="227.0" layoutY="153.0" prefHeight="17.0" prefWidth="130.0" textFill="#0000008f" />
+   </children>
+</Pane>

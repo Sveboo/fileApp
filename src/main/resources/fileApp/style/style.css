@@ -1,0 +1,15 @@
+.pane{
+    -fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #7FD5D5, #cadbc0);
+}
+
+.button{
+    -fx-background-color: white;
+    -fx-border-radius: 5;
+}
+
+.textField{
+    -fx-border-color: #A9A9A9;
+    -fx-border-radius: 5;
+    -fx-background-color: white;
+    -fx-background-radius: 5;
+}

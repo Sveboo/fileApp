@@ -73,12 +73,11 @@ public class fileParser {
         try (BufferedReader reader
                      = new BufferedReader(new FileReader(path))) {
             String line;
-
             while ((line = reader.readLine()) != null) {
-                for (int i = 0; i < line.length(); ++i) {
-                    char symbol = line.charAt(i);
-                    if (toLowerCase(symbol) >= 'a' && toLowerCase(symbol) <= 'z') {
-                        dict.put(symbol, dict.getOrDefault(symbol, 0) + 1);
+                    char[] arrChar = line.toCharArray();
+                    for (char symbol : arrChar) {
+                        if (toLowerCase(symbol) >= 'a' && toLowerCase(symbol) <= 'z') {
+                            dict.put(symbol, dict.getOrDefault(symbol, 0) + 1);
                     }
                 }
             }

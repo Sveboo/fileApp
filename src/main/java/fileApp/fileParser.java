@@ -64,7 +64,7 @@ public class fileParser {
     }
 
     /**
-     * Gets letters from input-file and counts its number to dictionary(Character - Integer) of letters
+     * Gets letters from input-file and counts it's number to dictionary(Character - Integer) of letters
      * @return true if success else false
      */
     public boolean getData() {

@@ -15,9 +15,17 @@ public class SceneController {
     @FXML
     private Label invalidDetails;
 
+    /**
+     * Controller for GUI
+     */
     public SceneController() {
     }
 
+    /**
+     * Checks valid path to file
+     * @param input - name input-file
+     * @return true if success else false
+     */
     public boolean isPathValid(TextField input) {
         try {
             Path path = Paths.get(input.getText());
@@ -27,7 +35,13 @@ public class SceneController {
         }
     }
 
-    void sendError(String exceptMes, String source){
+
+    /**
+     * Prints error
+     * @param exceptMes error message
+     * @param source name file where error happens
+     */
+    public void sendError(String exceptMes, String source){
         Alert alert = new Alert(Alert.AlertType.ERROR);
         alert.setHeaderText("Problem with open \"" + source + "\"");
         alert.setContentText(exceptMes.replace(source, "").replaceAll("[()]", ""));
@@ -59,8 +73,10 @@ public class SceneController {
         }
     }
 
-    @FXML
-    void onButtonClick() {
+    /**
+     * button to run fileParser
+     */
+    public void onButtonClick() {
         setNormalStyle();
 
         if (!isPathValid(nameInputFile) || !isPathValid(nameOutputFile)) {

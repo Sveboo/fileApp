@@ -6,16 +6,32 @@ import java.util.Map;
 
 import static java.lang.Character.toLowerCase;
 
+/**
+ * Reads text from input-file, count the number of letters(A-Z, a - z) and writes to output-file
+ */
 public class fileParser {
+    /**
+     * name input-file
+     */
     private final String inputFileName;
-
+    /**
+     * name output-file
+     */
     private final String outputFilename;
-
+    /**
+     * dictionary for writing letters and its number
+     */
     private final Map<Character, Integer> dict;
-
+    /**
+     * error message
+     */
     private String exceptMes;
 
-
+    /**
+     * Constructor with two parameters
+     * @param input - name input-file
+     * @param output - name output-file
+     */
     fileParser(String input, String output){
         inputFileName = input;
         outputFilename = output;
@@ -23,18 +39,34 @@ public class fileParser {
         exceptMes = "";
     }
 
+    /**
+     * Getter for error message
+     * @return exceptMes
+     */
     public String getErrorMessage(){
         return exceptMes;
     }
 
+    /**
+     * Getter for input-file
+     * @return name input-file
+     */
     public String getOutputFilename() {
         return outputFilename;
     }
 
+    /**
+     * Getter for output-file
+     * @return name output-file
+     */
     public String getInputFileName() {
         return inputFileName;
     }
 
+    /**
+     * Gets letters from input-file and counts its number to dictionary(Character - Integer) of letters
+     * @return true if success else false
+     */
     public boolean getData() {
         File path = new File(inputFileName);
 
@@ -59,6 +91,10 @@ public class fileParser {
         }
     }
 
+    /**
+     * Writes information from dictionary to output-file
+     * @return true if success else false
+     */
     public boolean fillData() {
         try (Writer writer = new BufferedWriter(new FileWriter(outputFilename, StandardCharsets.UTF_8))) {
 
